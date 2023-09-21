@@ -1,6 +1,6 @@
 package net.feltmc.neoforge.patches.mixin;
 
-import io.github.feltmc.feltasm.asm.CreateStatic;
+import net.feltmc.feltasm.asm.CreateStatic;
 import net.minecraft.core.Registry;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.data.registries.VanillaRegistries;

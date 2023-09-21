@@ -1,7 +1,7 @@
 package net.feltmc.neoforge.patches;
 
 import fr.catcore.cursedmixinextensions.CursedMixinExtensions;
-import io.github.feltmc.feltasm.platform.fabric.FeltASMMixinPlugin;
+import net.feltmc.feltasm.platform.fabric.FeltASMMixinPlugin;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 

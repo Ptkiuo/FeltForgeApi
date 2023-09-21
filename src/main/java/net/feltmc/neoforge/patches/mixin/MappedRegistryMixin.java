@@ -2,7 +2,7 @@ package net.feltmc.neoforge.patches.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.serialization.Lifecycle;
-import io.github.feltmc.feltasm.asm.CreateStatic;
+import net.feltmc.feltasm.asm.CreateStatic;
 import net.feltmc.neoforge.patches.interfaces.MappedRegistryInterface;
 import net.minecraft.core.Holder;
 import net.minecraft.core.MappedRegistry;
