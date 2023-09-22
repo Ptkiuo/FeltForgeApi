@@ -118,6 +118,27 @@
 			"net/minecraft/class_1887": [
 				"net/minecraftforge/common/extensions/IForgeEnchantment",
 				"net/feltmc/neoforge/patches/interfaces/EnchantmentInterface"
+			],
+			"net/minecraft/class_1657": [
+				"net/minecraftforge/common/extensions/IForgePlayer"
+			],
+			"net/minecraft/class_2168": [
+				"net/minecraftforge/common/extensions/IForgeCommandSourceStack"
+			],
+			"net/minecraft/class_2388": [
+				"net/feltmc/neoforge/patches/interfaces/BlockParticleOptionInterface"
+			],
+			"net/minecraft/class_2505": [
+				"net/feltmc/neoforge/patches/interfaces/NbtAccounterInterface"
+			],
+			"net/minecraft/class_3304": [
+				"net/feltmc/neoforge/patches/interfaces/ReloadableResourceManagerInterface"
+			],
+			"net/minecraft/class_4309": [
+				"net/feltmc/neoforge/patches/interfaces/SimpleJsonResourceReloadListenerInterface"
+			],
+			"net/minecraft/class_3497": [
+				"net/feltmc/neoforge/patches/interfaces/TagEntryInterface"
 			]
 		}
 	}

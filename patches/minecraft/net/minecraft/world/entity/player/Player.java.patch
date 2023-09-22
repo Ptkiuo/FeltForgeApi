@@ -3,9 +3,7 @@
 @@ -115,7 +_,8 @@
  import net.minecraft.world.scores.Team;
  import org.slf4j.Logger;
- 
--public abstract class Player extends LivingEntity {
-+public abstract class Player extends LivingEntity implements net.minecraftforge.common.extensions.IForgePlayer {
+
 +   public static final String PERSISTED_NBT_TAG = "PlayerPersisted";
     private static final Logger f_219722_ = LogUtils.getLogger();
     public static final int f_150082_ = 16;

@@ -35,7 +35,7 @@ public abstract class MappedRegistryMixin<T> implements MappedRegistryInterface 
 	@CreateStatic
 	private static final Set<ResourceLocation> KNOWN = new LinkedHashSet<>(); // LinkedHashSet may not be best choice here
 	
-	// TODO: this doesn't work for dev
+	// TODO felt: this doesn't work for dev
 	@CreateStatic
 	private static Set<ResourceLocation> getKnownRegistries() {
 		return java.util.Collections.unmodifiableSet(KNOWN);
