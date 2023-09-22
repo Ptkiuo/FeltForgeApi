@@ -12,12 +12,3 @@
     public static ExecutorService m_183991_() {
        return f_137444_;
     }
-@@ -239,7 +_,7 @@
-       try {
-          type = DataFixers.m_14512_().getSchema(DataFixUtils.makeKey(SharedConstants.m_183709_().m_183476_().m_193006_())).getChoiceType(p_137552_, p_137553_);
-       } catch (IllegalArgumentException illegalargumentexception) {
--         f_137446_.error("No data fixer registered for {}", (Object)p_137553_);
-+         f_137446_.debug("No data fixer registered for {}", (Object)p_137553_);
-          if (SharedConstants.f_136183_) {
-             throw illegalargumentexception;
-          }
