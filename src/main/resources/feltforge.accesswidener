@@ -130,3 +130,4 @@ accessible class net/minecraft/core/RegistrySetBuilder$RegistryStub
 accessible field net/minecraft/core/RegistrySetBuilder entries Ljava/util/List;
 accessible method net/minecraft/client/renderer/block/model/BlockModel bakeFace (Lnet/minecraft/client/renderer/block/model/BlockElement;Lnet/minecraft/client/renderer/block/model/BlockElementFace;Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/ModelState;Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/block/model/BakedQuad;
 accessible class net/minecraft/server/advancements/AdvancementVisibilityEvaluator$VisibilityRule
+accessible method net/minecraft/advancements/Advancement$Builder <init> (Lnet/minecraft/resources/ResourceLocation;Lnet/minecraft/advancements/DisplayInfo;Lnet/minecraft/advancements/AdvancementRewards;Ljava/util/Map;[[Ljava/lang/String;Z)V
