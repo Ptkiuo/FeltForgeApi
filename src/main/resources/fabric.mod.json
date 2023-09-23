@@ -140,16 +140,55 @@
 			"net/minecraft/class_3497": [
 				"net/feltmc/neoforge/patches/interfaces/TagEntryInterface"
 			],
-			"net/minecraft/class_329": [
-				"net/feltmc/neoforge/patches/interfaces/GuiInterface"
+			"net/minecraft/class_1842": [
+				"net/minecraftforge/common/extensions/IForgePotion"
 			],
-			"net/minecraft/class_161$class_162": [
-				"net/minecraftforge/common/extensions/IForgeAdvancementBuilder"
+			"net/minecraft/class_1744": [
+				"net/feltmc/neoforge/patches/interfaces/ArrowItemInterface"
 			],
-			"net/minecraft/class_332": [
-				"net/minecraftforge/client/extensions/IForgeGuiGraphics",
-				"net/feltmc/neoforge/patches/interfaces/GuiGraphicsInterface"
-			]
+			"net/minecraft/class_5633": [
+				"net/minecraftforge/common/extensions/IForgeDispensibleContainerItem"
+			],
+			"net/minecraft/class_2263": [
+				"net/minecraftforge/common/extensions/IForgeBucketPickup"
+			],
+			"net/minecraft/class_2311": [
+				"net/minecraftforge/common/extensions/IForgeShearable"
+			],
+			"net/minecraft/class_2397": [
+				"net/minecraftforge/common/extensions/IForgeShearable"
+			],
+			"net/minecraft/class_2476": [
+				"net/minecraftforge/common/extensions/IForgeShearable"
+			],
+			"net/minecraft/class_2526": [
+				"net/minecraftforge/common/extensions/IForgeShearable"
+			],
+			"net/minecraft/class_2560": [
+				"net/minecraftforge/common/extensions/IForgeShearable"
+			],
+			"net/minecraft/class_2881": [
+				"net/feltmc/neoforge/patches/interfaces/EndDragonFightInterface"
+			],
+			"net/minecraft/class_1946": [
+				"net/minecraftforge/common/util/ITeleporter"
+			],
+			"net/minecraft/class_20": [
+				"net/feltmc/neoforge/patches/interfaces/MapDecorationInterface"
+			],
+			"net/minecraft/class_34": [
+				"net/feltmc/neoforge/patches/interfaces/LevelSummaryInterface"
+            ],
+            "net/minecraft/class_329": [
+              "net/feltmc/neoforge/patches/interfaces/GuiInterface"
+            ],
+            "net/minecraft/class_161$class_162": [
+              "net/minecraftforge/common/extensions/IForgeAdvancementBuilder"
+            ],
+            "net/minecraft/class_332": [
+              "net/minecraftforge/client/extensions/IForgeGuiGraphics",
+              "net/feltmc/neoforge/patches/interfaces/GuiGraphicsInterface"
+            ]
 		}
 	}
 }
