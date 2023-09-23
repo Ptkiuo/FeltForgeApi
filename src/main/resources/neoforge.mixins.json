@@ -42,13 +42,26 @@
 		"world.entity.player.PlayerMixin",
 		"world.entity.projectile.FireworkRocketEntityMixin",
 		"world.entity.vehicle.MinecartSpawnerMixin",
+		"world.item.ArrowItemMixin",
+		"world.item.DispensibleContainerItemMixin",
+		"world.item.alchemy.PotionMixin",
 		"world.item.enchantment.DiggingEnchantmentMixin",
 		"world.item.enchantment.EnchantmentCategoryMixin",
 		"world.item.enchantment.EnchantmentMixin",
 		"world.level.DataPackConfigMixin",
+		"world.level.block.BucketPickupMixin",
+		"world.level.block.BushBlockMixin",
+		"world.level.block.LeavesBlockMixin",
+		"world.level.block.SeagrassBlockMixin",
+		"world.level.block.TallGrassBlockMixin",
+		"world.level.block.WebBlockMixin",
 		"world.level.block.state.BlockStateMixin",
+		"world.level.dimension.end.EndDragonFightMixin",
 		"world.level.material.FluidMixin",
-		"world.level.material.FluidStateMixin"
+		"world.level.material.FluidStateMixin",
+		"world.level.portal.PortalForcerMixin",
+		"world.level.saveddata.maps.MapDecorationMixin",
+		"world.level.storage.LevelSummaryMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
