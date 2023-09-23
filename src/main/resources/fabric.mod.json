@@ -139,6 +139,16 @@
 			],
 			"net/minecraft/class_3497": [
 				"net/feltmc/neoforge/patches/interfaces/TagEntryInterface"
+			],
+			"net/minecraft/class_329": [
+				"net/feltmc/neoforge/patches/interfaces/GuiInterface"
+			],
+			"net/minecraft/class_161$class_162": [
+				"net/minecraftforge/common/extensions/IForgeAdvancementBuilder"
+			],
+			"net/minecraft/class_332": [
+				"net/minecraftforge/client/extensions/IForgeGuiGraphics",
+				"net/feltmc/neoforge/patches/interfaces/GuiGraphicsInterface"
 			]
 		}
 	}

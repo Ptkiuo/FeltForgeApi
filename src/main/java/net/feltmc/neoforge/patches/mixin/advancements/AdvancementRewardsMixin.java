@@ -18,6 +18,6 @@ public class AdvancementRewardsMixin {
                                                     Operation<LootParams.Builder> operation,
                                                     @Local(ordinal = 0) ServerPlayer player
                                                     ) {
-        return operation.call(lootContextParam, object).withLuck(player.getLuck());
+        return operation.call(builder, lootContextParam, object).withLuck(player.getLuck());
     }
 }
