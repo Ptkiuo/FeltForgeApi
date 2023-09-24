@@ -1,6 +1,10 @@
 pluginManagement {
 	repositories {
 		maven {
+			name = "Felt"
+			url = "https://repo.repsy.io/mvn/distant/feltmc/"
+		}
+		maven {
 			name = 'Fabric'
 			url = 'https://maven.fabricmc.net/'
 		}
