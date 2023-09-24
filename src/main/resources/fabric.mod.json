@@ -188,7 +188,17 @@
             "net/minecraft/class_332": [
               "net/minecraftforge/client/extensions/IForgeGuiGraphics",
               "net/feltmc/neoforge/patches/interfaces/GuiGraphicsInterface"
-            ]
+            ],
+			"net/minecraft/class_339": [
+				"net/minecraftforge/client/extensions/IAbstractWidgetExtension",
+				"net/feltmc/neoforge/patches/interfaces/AbstractWidgetInterface"
+			],
+			"net/minecraft/class_4185$class_7840": [
+				"net/feltmc/neoforge/patches/interfaces/Button$BuilderInterface"
+			],
+			"net/minecraft/class_437": [
+				"net/feltmc/neoforge/patches/interfaces/ScreenInterface"
+			]
 		}
 	}
 }
