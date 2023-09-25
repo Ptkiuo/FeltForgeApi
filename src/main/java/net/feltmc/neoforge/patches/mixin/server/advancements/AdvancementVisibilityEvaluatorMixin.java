@@ -11,15 +11,16 @@ import org.spongepowered.asm.mixin.Shadow;
 
 import java.util.function.Predicate;
 
+@SuppressWarnings("MissingUnique")
 @Mixin(AdvancementVisibilityEvaluator.class)
 public abstract class AdvancementVisibilityEvaluatorMixin {
     @Shadow
-    protected static boolean evaluateVisibility(Advancement advancement, Stack<AdvancementVisibilityEvaluator.VisibilityRule> stack, Predicate<Advancement> predicate, AdvancementVisibilityEvaluator.Output output) {
+    private static boolean evaluateVisibility(Advancement advancement, Stack<AdvancementVisibilityEvaluator.VisibilityRule> stack, Predicate<Advancement> predicate, AdvancementVisibilityEvaluator.Output output) {
         throw new RuntimeException("what?");
     }
 
-    @CreateStatic @Public
-    private static boolean isVisible(Advancement advancement, Predicate<Advancement> test) {
+    @CreateStatic
+    public boolean isVisible(Advancement advancement, Predicate<Advancement> test) {
         Stack<AdvancementVisibilityEvaluator.VisibilityRule> stack = new ObjectArrayList<>();
         for(int i = 0; i <= 2; ++i) {
             stack.push(AdvancementVisibilityEvaluator.VisibilityRule.NO_CHANGE);

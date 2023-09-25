@@ -256,6 +256,92 @@
 					"static": true,
 					"signature": "MAX_TABS:I"
 				}
+			],
+			"net/minecraft/class_2370": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "getKnownRegistries()Ljava/util/Set;"
+				}
+			],
+			"net/minecraft/class_7887": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": true,
+					"signature": "DATAPACK_REGISTRY_KEYS:Ljava/util/List;"
+				}
+			],
+			"com/mojang/blaze3d/platform/GlStateManager": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": true,
+					"signature": "lastBrightnessX:F"
+				},
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": true,
+					"signature": "lastBrightnessY:F"
+				}
+			],
+			"net/minecraft/class_8005": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "isVisible(Lnet/minecraft/class_161;Ljava/util/function/Predicate;)Z"
+				}
+			],
+			"net/minecraft/class_3481": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "create(Lnet/minecraft/class_2960;)Lnet/minecraft/class_6862;"
+				}
+			],
+			"net/minecraft/class_3486": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "create(Lnet/minecraft/class_2960;)Lnet/minecraft/class_6862;"
+				}
+			],
+			"net/minecraft/class_3489": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "create(Lnet/minecraft/class_2960;)Lnet/minecraft/class_6862;"
+				}
+			],
+			"net/minecraft/class_4185": [
+				{
+					"type": "method",
+					"visibility": "protected",
+					"static": false,
+					"signature": "<init>(Lnet/minecraft/class_4185$class_7840;)V"
+				}
+			],
+			"net/minecraft/class_7458": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Lnet/minecraft/class_7784;Ljava/util/concurrent/CompletableFuture;Ljava/lang/String;Lnet/minecraftforge/common/data/ExistingFileHelper;)V"
+				}
+			],
+			"net/minecraft/class_1886": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "create(Ljava/lang/String;Ljava/util/function/Predicate;)Lnet/minecraft/class_1886;"
+				}
 			]
 		}
 	}

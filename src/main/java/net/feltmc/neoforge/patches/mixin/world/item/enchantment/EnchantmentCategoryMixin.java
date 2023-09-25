@@ -1,7 +1,8 @@
 package net.feltmc.neoforge.patches.mixin.world.item.enchantment;
 
 import fr.catcore.cursedmixinextensions.annotations.NewConstructor;
-import fr.catcore.cursedmixinextensions.annotations.Public;
+import fr.catcore.cursedmixinextensions.annotations.ShadowConstructor;
+import net.feltmc.feltasm.asm.CreateStatic;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraftforge.common.IExtensibleEnum;
@@ -9,20 +10,24 @@ import org.spongepowered.asm.mixin.Mixin;
 
 import java.util.function.Predicate;
 
+@SuppressWarnings("MissingUnique")
 @Mixin(EnchantmentCategory.class)
-public class EnchantmentCategoryMixin implements IExtensibleEnum {
+public abstract class EnchantmentCategoryMixin implements IExtensibleEnum {
     private Predicate<Item> delegate;
 
+    // TODO felt: investigate necessity of no-arg constructor (incompatible with enum)
+    
+    @ShadowConstructor
+    public abstract void thiz(String key, int value);
+    
     @NewConstructor
-    private void ctr() {}
-
-    @NewConstructor
-    private void ctr(Predicate<Item> delegate) {
+    private void thiz(String key, int value, Predicate<Item> delegate) {
+        thiz(key, value);
         this.delegate = delegate;
     }
 
-    @Public
-    private static EnchantmentCategory create(String name, java.util.function.Predicate<Item> delegate) {
+    @CreateStatic
+    public EnchantmentCategory create(String name, Predicate<Item> delegate) {
         throw new IllegalStateException("Enum not extended");
     }
 

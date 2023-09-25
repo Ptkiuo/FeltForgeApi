@@ -1,6 +1,7 @@
 package net.feltmc.neoforge.patches.mixin.data.tags;
 
 import fr.catcore.cursedmixinextensions.annotations.NewConstructor;
+import fr.catcore.cursedmixinextensions.annotations.ReplaceConstructor;
 import fr.catcore.cursedmixinextensions.annotations.ShadowSuperConstructor;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.Registry;
@@ -16,10 +17,11 @@ import java.util.concurrent.CompletableFuture;
 @Mixin(BannerPatternTagsProvider.class)
 public abstract class BannerPatternTagsProviderMixin {
     @ShadowSuperConstructor
-    public abstract void superCtr(PackOutput p_256596_, ResourceKey<? extends Registry<BannerPattern>> p_255886_, CompletableFuture<HolderLookup.Provider> p_256513_, String modId, @org.jetbrains.annotations.Nullable net.minecraftforge.common.data.ExistingFileHelper existingFileHelper);
+    public abstract void zuper(PackOutput p_256596_, ResourceKey<? extends Registry<BannerPattern>> p_255886_, CompletableFuture<HolderLookup.Provider> p_256513_, String modId, @org.jetbrains.annotations.Nullable net.minecraftforge.common.data.ExistingFileHelper existingFileHelper);
 
     @NewConstructor
-    public void ctr(PackOutput p_256451_, CompletableFuture<HolderLookup.Provider> p_256420_, String modId, @org.jetbrains.annotations.Nullable net.minecraftforge.common.data.ExistingFileHelper existingFileHelper) {
-        this.superCtr(p_256451_, Registries.BANNER_PATTERN, p_256420_, modId, existingFileHelper);
+    @ReplaceConstructor
+    public void thiz(PackOutput p_256451_, CompletableFuture<HolderLookup.Provider> p_256420_, String modId, @org.jetbrains.annotations.Nullable net.minecraftforge.common.data.ExistingFileHelper existingFileHelper) {
+        zuper(p_256451_, Registries.BANNER_PATTERN, p_256420_, modId, existingFileHelper);
     }
 }

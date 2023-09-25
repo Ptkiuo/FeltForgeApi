@@ -8,10 +8,11 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.material.Fluid;
 import org.spongepowered.asm.mixin.Mixin;
 
+@SuppressWarnings("MissingUnique")
 @Mixin(FluidTags.class)
 public class FluidTagsMixin {
     @CreateStatic
-    private static TagKey<Fluid> create(ResourceLocation name) {
+    public TagKey<Fluid> create(ResourceLocation name) {
         return TagKey.create(Registries.FLUID, name);
     }
 }

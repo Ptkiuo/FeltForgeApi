@@ -8,10 +8,11 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 import org.spongepowered.asm.mixin.Mixin;
 
+@SuppressWarnings("MissingUnique")
 @Mixin(BlockTags.class)
 public class BlockTagsMixin {
     @CreateStatic
-    private static TagKey<Block> create(ResourceLocation name) {
+    public TagKey<Block> create(ResourceLocation name) {
         return TagKey.create(Registries.BLOCK, name);
     }
 }

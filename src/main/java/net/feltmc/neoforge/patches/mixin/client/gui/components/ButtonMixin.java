@@ -1,6 +1,7 @@
 package net.feltmc.neoforge.patches.mixin.client.gui.components;
 
 import fr.catcore.cursedmixinextensions.annotations.NewConstructor;
+import fr.catcore.cursedmixinextensions.annotations.ReplaceConstructor;
 import fr.catcore.cursedmixinextensions.annotations.ShadowConstructor;
 import net.minecraft.client.gui.components.AbstractButton;
 import net.minecraft.client.gui.components.Button;
@@ -14,11 +15,12 @@ public abstract class ButtonMixin extends AbstractButton {
     }
 
     @ShadowConstructor
-    abstract void ctr(int i, int j, int k, int l, Component component, Button.OnPress onPress, Button.CreateNarration createNarration);
+    abstract void thiz(int i, int j, int k, int l, Component component, Button.OnPress onPress, Button.CreateNarration createNarration);
 
     @NewConstructor
-    protected void ctr(Button.Builder builder) {
-        this.ctr(builder.x, builder.y, builder.width, builder.height, builder.message, builder.onPress, builder.createNarration);
+    @ReplaceConstructor
+    protected void thiz(Button.Builder builder) {
+        thiz(builder.x, builder.y, builder.width, builder.height, builder.message, builder.onPress, builder.createNarration);
         this.setTooltip(builder.tooltip); // Forge: Make use of the Builder tooltip
     }
 }

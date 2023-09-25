@@ -8,15 +8,25 @@ import net.minecraft.resources.ResourceKey;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
 
+@SuppressWarnings("MissingUnique")
 @Mixin(VanillaRegistries.class)
 public class VanillaRegistriesMixin {
+    
     @Shadow @Final
     private static RegistrySetBuilder BUILDER;
-
     
     @CreateStatic
-    private static final List<? extends ResourceKey<? extends Registry<?>>> DATAPACK_REGISTRY_KEYS = BUILDER.getEntryKeys();
+    private static List<? extends ResourceKey<? extends Registry<?>>> DATAPACK_REGISTRY_KEYS;
+    
+    @Inject(method = "<clinit>", at = @At("TAIL"))
+    private static void ztatic(CallbackInfo ci) {
+        DATAPACK_REGISTRY_KEYS = BUILDER.getEntryKeys();
+    }
+    
 }
