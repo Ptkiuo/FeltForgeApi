@@ -2,10 +2,10 @@ package net.feltmc.neoforge.patches.mixin.mojang.blaze3d.pipeline;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
+import com.mojang.blaze3d.pipeline.RenderTarget;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.feltmc.neoforge.patches.interfaces.RenderTargetInterface;
 import net.minecraft.client.Minecraft;
-import com.mojang.blaze3d.pipeline.RenderTarget;
 import org.lwjgl.opengl.GL30;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

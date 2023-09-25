@@ -2,11 +2,11 @@ package net.feltmc.neoforge.patches.mixin.mojang.blaze3d.platform;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.platform.GlStateManager;
+import net.feltmc.feltasm.asm.CreateStatic;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import net.feltmc.feltasm.asm.CreateStatic;
 
 @SuppressWarnings("MissingUnique")
 @Mixin(GlStateManager.class)

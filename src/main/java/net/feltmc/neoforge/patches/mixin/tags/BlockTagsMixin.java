@@ -1,6 +1,5 @@
 package net.feltmc.neoforge.patches.mixin.tags;
 
-import fr.catcore.cursedmixinextensions.annotations.Public;
 import net.feltmc.feltasm.asm.CreateStatic;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;

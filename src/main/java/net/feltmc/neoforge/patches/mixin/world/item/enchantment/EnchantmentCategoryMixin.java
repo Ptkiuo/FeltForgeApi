@@ -3,7 +3,6 @@ package net.feltmc.neoforge.patches.mixin.world.item.enchantment;
 import fr.catcore.cursedmixinextensions.annotations.NewConstructor;
 import fr.catcore.cursedmixinextensions.annotations.Public;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraftforge.common.IExtensibleEnum;
 import org.spongepowered.asm.mixin.Mixin;

@@ -1,7 +1,6 @@
 package net.feltmc.neoforge.patches.mixin.core;
 
 import com.mojang.math.Constants;
-import fr.catcore.cursedmixinextensions.annotations.Public;
 import net.feltmc.feltasm.asm.CreateStatic;
 import net.minecraft.core.Direction;
 import org.spongepowered.asm.mixin.Final;

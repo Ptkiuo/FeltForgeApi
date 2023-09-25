@@ -1,6 +1,5 @@
 package net.feltmc.neoforge.patches.mixin.client.gui.screens;
 
-import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import fr.catcore.cursedmixinextensions.annotations.NewConstructor;
 import fr.catcore.cursedmixinextensions.annotations.ReplaceConstructor;
 import fr.catcore.cursedmixinextensions.annotations.ShadowConstructor;
