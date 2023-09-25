@@ -899,9 +899,8 @@ transitive-accessible method net/minecraft/world/level/levelgen/NoiseGeneratorSe
 transitive-accessible method net/minecraft/world/level/levelgen/NoiseGeneratorSettings floatingIslands (Lnet/minecraft/data/worldgen/BootstapContext;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
 # public net.minecraft.world.level.levelgen.NoiseGeneratorSettings m_255410_(Lnet/minecraft/data/worldgen/BootstapContext;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings; # nether
 transitive-accessible method net/minecraft/world/level/levelgen/NoiseGeneratorSettings nether (Lnet/minecraft/data/worldgen/BootstapContext;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
-# TODO felt: fix below
 # public net.minecraft.world.level.levelgen.NoiseGeneratorSettings m_64474_(Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App; # lambda$static$0
-#transitive-accessible method net/minecraft/world/level/levelgen/NoiseGeneratorSettings lambda$static$0 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+transitive-accessible method net/minecraft/world/level/levelgen/NoiseGeneratorSettings method_28558 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
 # public net.minecraft.world.level.levelgen.feature.featuresize.FeatureSizeType <init>(Lcom/mojang/serialization/Codec;)V # constructor
 transitive-accessible method net/minecraft/world/level/levelgen/feature/featuresize/FeatureSizeType <init> (Lcom/mojang/serialization/Codec;)V
 # public net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType <init>(Lcom/mojang/serialization/Codec;)V # constructor
