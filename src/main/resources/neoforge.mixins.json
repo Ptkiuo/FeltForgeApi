@@ -44,6 +44,7 @@
     "world.entity.vehicle.MinecartSpawnerMixin",
     "world.item.ArrowItemMixin",
     "world.item.DispensibleContainerItemMixin",
+    "world.item.RarityMixin",
     "world.item.alchemy.PotionMixin",
     "world.item.enchantment.DiggingEnchantmentMixin",
     "world.item.enchantment.EnchantmentCategoryMixin",
@@ -67,6 +68,7 @@
     "defaultRequire": 1
   },
   "client": [
+    "client.MinecraftMixin",
     "client.gui.FontMixin",
     "client.gui.GuiGraphicsMixin",
     "client.gui.GuiMixin",
@@ -77,6 +79,9 @@
     "client.gui.components.ButtonMixin",
     "client.gui.components.DebugScreenOverlayMixin",
     "client.gui.components.toasts.ToastComponentMixin",
+    "client.gui.screens.AdvancementsScreenMixin",
+    "client.gui.screens.AdvancementTabMixin",
+    "client.gui.screens.AdvancementTabTypeMixin",
     "client.gui.screens.ChatScreenMixin",
     "client.gui.screens.ConnectScreen$1Mixin",
     "client.gui.screens.LoadingOverlayMixin",

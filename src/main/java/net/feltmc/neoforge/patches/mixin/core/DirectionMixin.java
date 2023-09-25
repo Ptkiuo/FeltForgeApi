@@ -15,10 +15,11 @@ import static net.minecraft.core.Direction.NORTH;
 public class DirectionMixin {
     @Shadow @Final private static Direction[] VALUES;
 
-    @CreateStatic @Public
-    private static Direction getNearestStable(float x, float y, float z) {
+    @SuppressWarnings("MissingUnique")
+    @CreateStatic
+    public Direction getNearestStable(float x, float y, float z) {
         Direction direction = NORTH;
-        Float f = Float.MIN_VALUE;
+        float f = Float.MIN_VALUE;
         for(Direction direction1 : VALUES) {
             float f1 = x * (float)direction1.getNormal().getX() + y * (float)direction1.getNormal().getY() + z * (float)direction1.getNormal().getZ();
             if (f1 > f + Constants.EPSILON) {

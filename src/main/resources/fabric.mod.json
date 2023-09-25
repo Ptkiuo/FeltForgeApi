@@ -198,6 +198,64 @@
 			],
 			"net/minecraft/class_437": [
 				"net/feltmc/neoforge/patches/interfaces/ScreenInterface"
+			],
+			"net/minecraft/class_310": [
+				"net/minecraftforge/client/extensions/IForgeMinecraft"
+			],
+			"net/minecraft/class_1814": [
+				"net/minecraftforge/common/IExtensibleEnum"
+			]
+		},
+		"felt-loom:overlays": {
+			"net/minecraft/class_2350": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "getNearestStable(FFF)Lnet/minecraft/class_2350;"
+				}
+			],
+			"net/minecraft/class_1814": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getStyleModifier()Ljava/util/function/UnaryOperator;"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "create(Ljava/lang/String;Lnet/minecraft/class_124;)Lnet/minecraft/class_1814;"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "create(Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lnet/minecraft/class_1814;"
+				}
+			],
+			"net/minecraft/class_454": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Lnet/minecraft/class_310;Lnet/minecraft/class_457;Lnet/minecraft/class_453;IILnet/minecraft/class_161;Lnet/minecraft/class_185;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getPage()I"
+				}
+			],
+			"net/minecraft/class_453": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": true,
+					"signature": "MAX_TABS:I"
+				}
 			]
 		}
 	}
