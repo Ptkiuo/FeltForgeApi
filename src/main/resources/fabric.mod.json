@@ -205,7 +205,7 @@
 				"net/minecraftforge/common/IExtensibleEnum"
 			]
 		},
-		"felt-loom:overlays": {
+		"felt-spindle:overlays": {
 			"net/minecraft/class_2350": [
 				{
 					"type": "method",
