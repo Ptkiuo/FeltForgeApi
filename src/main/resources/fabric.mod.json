@@ -341,6 +341,34 @@
 					"static": true,
 					"signature": "create(Ljava/lang/String;Ljava/util/function/Predicate;)Lnet/minecraft/class_1886;"
 				}
+			],
+			"net/minecraft/class_1927": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getPosition()Lnet/minecraft/class_243;"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getExploder()Lnet/minecraft/class_1297;"
+				}
+			],
+			"net/minecraft/class_1917": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getSpawnerEntity()Lnet/minecraft/class_1297;"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getSpawnerBlockEntity()Lnet/minecraft/class_2586;"
+				}
 			]
 		}
 	}

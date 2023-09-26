@@ -17,17 +17,3 @@
 +                        ((Mob)entity).m_6518_(p_151312_, event.getDifficulty(), event.getSpawnType(), event.getSpawnData(), event.getSpawnTag());
                       }
                    }
- 
-@@ -283,4 +_,12 @@
-    public double m_45474_() {
-       return this.f_45446_;
-    }
-+
-+   @Nullable
-+   public Entity getSpawnerEntity() {
-+      return null;
-+   }
-+
-+   @Nullable
-+   public net.minecraft.world.level.block.entity.BlockEntity getSpawnerBlockEntity(){ return null; }
- }
