@@ -6,13 +6,13 @@
 	"description": "(Neo)Forge on Fabric",
 	"authors": [
 		"FeltMC",
-		"NeoForge",
 		"MinecraftForge",
+		"NeoForge",
 		"Fabricators of Create (PortingLib)"
 	],
 	"contributors": [
 		"unix-supremacist",
-		"Nolij",
+		"Nolij (@xdMatthewbx#1337)",
 		"PseudoDistant",
 		"Trinsdar",
 		"catcore"
@@ -21,7 +21,7 @@
 		"homepage": "https://feltmc.net/",
 		"sources": "https://github.com/FeltMC/FeltForgeApi"
 	},
-	"license": "LGPL",
+	"license": "LGPL-2.1",
 	"icon": "assets/feltforge/icon.png",
 	"environment": "*",
 	"mixins": [
@@ -33,9 +33,6 @@
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	},
 	"custom": {
 		"loom:injected_interfaces": {
