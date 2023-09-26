@@ -3,21 +3,23 @@
 	"id": "feltforge",
 	"version": "${version}",
 	"name": "FeltForge",
-	"description": "NeoForge on Fabric",
+	"description": "(Neo)Forge on Fabric",
 	"authors": [
 		"FeltMC",
 		"NeoForge",
-		"MinecraftForge"
+		"MinecraftForge",
+		"Fabricators of Create (PortingLib)"
 	],
 	"contributors": [
 		"unix-supremacist",
 		"Nolij",
 		"PseudoDistant",
-		"Trinsdar"
+		"Trinsdar",
+		"catcore"
 	],
 	"contact": {
 		"homepage": "https://feltmc.net/",
-		"sources": "https://github.com/FeltMC/NeoForge"
+		"sources": "https://github.com/FeltMC/FeltForgeApi"
 	},
 	"license": "LGPL",
 	"icon": "assets/feltforge/icon.png",
