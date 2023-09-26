@@ -1,33 +1,5 @@
 --- a/net/minecraft/client/gui/screens/controls/KeyBindsList.java
 +++ b/net/minecraft/client/gui/screens/controls/KeyBindsList.java
-@@ -29,6 +_,8 @@
-    final KeyBindsScreen f_193858_;
-    int f_193859_;
- 
-+   final static int NAME_SPLIT_LENGTH = 185;
-+
-    public KeyBindsList(KeyBindsScreen p_193861_, Minecraft p_193862_) {
-       super(p_193862_, p_193861_.f_96543_ + 45, p_193861_.f_96544_, 20, p_193861_.f_96544_ - 32, 20);
-       this.f_193858_ = p_193861_;
-@@ -46,7 +_,8 @@
-          Component component = Component.m_237115_(keymapping.m_90860_());
-          int i = p_193862_.f_91062_.m_92852_(component);
-          if (i > this.f_193859_) {
--            this.f_193859_ = i;
-+            // Neo: max width for the keybind descriptions to make all readable
-+            this.f_193859_ = Math.min(i, NAME_SPLIT_LENGTH);
-          }
- 
-          this.m_7085_(new KeyBindsList.KeyEntry(keymapping, component));
-@@ -64,7 +_,7 @@
-    }
- 
-    protected int m_5756_() {
--      return super.m_5756_() + 15;
-+      return super.m_5756_() + 15 + 20;
-    }
- 
-    public int m_5759_() {
 @@ -129,10 +_,11 @@
           this.f_193912_ = Button.m_253074_(p_193917_, (p_269618_) -> {
              KeyBindsList.this.f_193858_.f_193975_ = p_193916_;

@@ -1,4 +1,4 @@
-package net.feltmc.neoforge.patches.mixin.client.gui.screens;
+package net.feltmc.neoforge.patches.mixin.client.gui.screens.advancements;
 
 import fr.catcore.cursedmixinextensions.annotations.Public;
 import net.feltmc.feltasm.asm.CreateStatic;

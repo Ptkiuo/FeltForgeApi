@@ -1,9 +1,8 @@
-package net.feltmc.neoforge.patches.mixin.client.gui.screens;
+package net.feltmc.neoforge.patches.mixin.client.gui.screens.advancements;
 
 import com.llamalad7.mixinextras.injector.WrapWithCondition;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import fr.catcore.cursedmixinextensions.annotations.ShadowSuper;
 import net.feltmc.feltasm.asm.CreateStatic;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.client.gui.GuiGraphics;
@@ -24,13 +23,17 @@ import java.util.Map;
 
 @SuppressWarnings("MissingUnique")
 @Mixin(AdvancementsScreen.class)
-public abstract class AdvancementsScreenMixin {
+public abstract class AdvancementsScreenMixin extends Screen{
 	
 	@Shadow @Final private Map<Advancement, AdvancementTab> tabs;
 	@Shadow @Final public static int WINDOW_WIDTH;
 	@CreateStatic
 	private static int tabPage, maxPages;
-	
+
+	protected AdvancementsScreenMixin(Component component) {
+		super(component);
+	}
+
 	@Inject(method = "init", at = @At("TAIL"))
 	protected void init(CallbackInfo ci) {
 		if (this.tabs.size() > AdvancementTabType.MAX_TABS) {
@@ -63,12 +66,9 @@ public abstract class AdvancementsScreenMixin {
 		}
 	}
 	
-	@ShadowSuper("render(Lnet/minecraft/client/gui/GuiGraphics;IIF)V")
-	public abstract void super$render(GuiGraphics guiGraphics, int i, int j, float f);
-	
 	@Inject(method = "render", at = @At("TAIL"))
 	public void render$render(GuiGraphics guiGraphics, int i, int j, float f, CallbackInfo ci) {
-		super$render(guiGraphics, i, j, f);
+		super.render(guiGraphics, i, j, f);
 	}
 	
 	@WrapWithCondition(method = "renderWindow", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/screens/advancements/AdvancementTab;drawTab(Lnet/minecraft/client/gui/GuiGraphics;IIZ)V"))
