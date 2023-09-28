@@ -369,6 +369,40 @@
 					"static": false,
 					"signature": "getSpawnerBlockEntity()Lnet/minecraft/class_2586;"
 				}
+			],
+			"net/minecraft/class_31": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "hasConfirmedExperimentalWarning()Z"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "withConfirmedWarning(Z)Lnet/minecraft/class_31;"
+				}
+			],
+			"net/minecraft/class_1940": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Ljava/lang/String;Lnet/minecraft/class_1934;ZLnet/minecraft/class_1267;ZLnet/minecraft/class_1928;Lnet/minecraft/class_7712;Lcom/mojang/serialization/Lifecycle;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "withLifecycle(Lcom/mojang/serialization/Lifecycle;)Lnet/minecraft/class_1940;"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getLifecycle()Lcom/mojang/serialization/Lifecycle;"
+				}
 			]
 		}
 	}

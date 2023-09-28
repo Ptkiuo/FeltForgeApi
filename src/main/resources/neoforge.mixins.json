@@ -10,7 +10,7 @@
 		"advancements.AdvancementRewardsMixin",
 		"advancements.critereon.ItemPredicateMixin",
 		"client.gui.screens.TitleScreenMixin",
-    	"commands.CommandSourceStackMixin",
+		"commands.CommandSourceStackMixin",
 		"core.DirectionMixin",
 		"core.Holder$ReferenceMixin",
 		"core.HolderMixin",
@@ -55,6 +55,7 @@
 		"world.level.ClipContextMixin",
 		"world.level.DataPackConfigMixin",
 		"world.level.ExplosionMixin",
+		"world.level.LevelSettingsMixin",
 		"world.level.block.BambooStalkBlockMixin",
 		"world.level.block.BucketPickupMixin",
 		"world.level.block.BushBlockMixin",
@@ -67,8 +68,10 @@
 		"world.level.material.FluidMixin",
 		"world.level.material.FluidStateMixin",
 		"world.level.portal.PortalForcerMixin",
+		"world.level.portal.PortalShapeMixin",
 		"world.level.saveddata.maps.MapDecorationMixin",
-		"world.level.storage.LevelSummaryMixin"
+		"world.level.storage.LevelSummaryMixin",
+		"world.level.storage.PrimaryLevelDataMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
