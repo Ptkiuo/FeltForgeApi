@@ -1,6 +1,6 @@
 accessWidener v2 named
 
-# Forge API ATs
+# spindle {
 # public net.minecraft.advancements.CriteriaTriggers m_10595_(Lnet/minecraft/advancements/CriterionTrigger;)Lnet/minecraft/advancements/CriterionTrigger; # register
 transitive-accessible method net/minecraft/advancements/CriteriaTriggers register (Lnet/minecraft/advancements/CriterionTrigger;)Lnet/minecraft/advancements/CriterionTrigger;
 # default net.minecraft.client.KeyMapping f_90817_ # isDown
@@ -14,6 +14,7 @@ transitive-mutable field net/minecraft/client/Options keyMappings [Lnet/minecraf
 transitive-accessible field net/minecraft/client/Options keyMappings [Lnet/minecraft/client/KeyMapping;
 # public net.minecraft.client.Options$FieldAccess
 transitive-accessible class net/minecraft/client/Options$FieldAccess
+#group protected net.minecraft.client.gui.Gui *
 # protected net.minecraft.client.gui.Gui f_168664_ # scopeScale
 transitive-accessible field net/minecraft/client/gui/Gui scopeScale F
 # protected net.minecraft.client.gui.Gui f_168665_ # SPYGLASS_SCOPE_LOCATION
@@ -110,6 +111,7 @@ transitive-accessible field net/minecraft/client/gui/Gui titleTime I
 transitive-accessible field net/minecraft/client/gui/Gui title Lnet/minecraft/network/chat/Component;
 # protected net.minecraft.client.gui.Gui f_93002_ # subtitle
 transitive-accessible field net/minecraft/client/gui/Gui subtitle Lnet/minecraft/network/chat/Component;
+#endgroup
 # protected net.minecraft.client.gui.Gui m_168688_(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/entity/player/Player;IIIIFIIIZ)V # renderHearts
 transitive-accessible method net/minecraft/client/gui/Gui renderHearts (Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/entity/player/Player;IIIIFIIIZ)V
 # public net.minecraft.client.gui.Gui m_280030_(Lnet/minecraft/client/gui/GuiGraphics;Lnet/minecraft/world/scores/Objective;)V # displayScoreboardSidebar
@@ -447,8 +449,10 @@ transitive-accessible class net/minecraft/util/ExtraCodecs$EitherCodec
 transitive-accessible class net/minecraft/util/datafix/fixes/StructuresBecomeConfiguredFix$Conversion
 # public net.minecraft.util.thread.BlockableEventLoop m_18689_(Ljava/lang/Runnable;)Ljava/util/concurrent/CompletableFuture; # submitAsync
 transitive-accessible method net/minecraft/util/thread/BlockableEventLoop submitAsync (Ljava/lang/Runnable;)Ljava/util/concurrent/CompletableFuture;
+#group public net.minecraft.world.damagesource.DamageSource *() #All methods public, most are already
 # public net.minecraft.world.damagesource.DamageSource <init>(Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;)V # constructor
 transitive-accessible method net/minecraft/world/damagesource/DamageSource <init> (Lnet/minecraft/core/Holder;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/entity/Entity;Lnet/minecraft/world/phys/Vec3;)V
+#endgroup
 # protected net.minecraft.world.entity.Entity f_19843_ # ENTITY_COUNTER
 transitive-accessible field net/minecraft/world/entity/Entity ENTITY_COUNTER Ljava/util/concurrent/atomic/AtomicInteger;
 # public net.minecraft.world.entity.Entity m_20078_()Ljava/lang/String; # getEncodeId
@@ -525,6 +529,7 @@ transitive-accessible field net/minecraft/world/item/CreativeModeTabs INGREDIENT
 transitive-accessible field net/minecraft/world/item/CreativeModeTabs REDSTONE_BLOCKS Lnet/minecraft/resources/ResourceKey;
 # public net.minecraft.world.item.CreativeModeTabs f_257039_ # INVENTORY
 transitive-accessible field net/minecraft/world/item/CreativeModeTabs INVENTORY Lnet/minecraft/resources/ResourceKey;
+#group public net.minecraft.world.item.Item <init>
 # public net.minecraft.world.item.AxeItem <init>(Lnet/minecraft/world/item/Tier;FFLnet/minecraft/world/item/Item$Properties;)V # constructor
 transitive-accessible method net/minecraft/world/item/AxeItem <init> (Lnet/minecraft/world/item/Tier;FFLnet/minecraft/world/item/Item$Properties;)V
 # public net.minecraft.world.item.DiggerItem <init>(FFLnet/minecraft/world/item/Tier;Lnet/minecraft/tags/TagKey;Lnet/minecraft/world/item/Item$Properties;)V # constructor
@@ -535,6 +540,7 @@ transitive-accessible method net/minecraft/world/item/HoeItem <init> (Lnet/minec
 transitive-accessible method net/minecraft/world/item/PickaxeItem <init> (Lnet/minecraft/world/item/Tier;IFLnet/minecraft/world/item/Item$Properties;)V
 # public net.minecraft.world.item.RecordItem <init>(ILnet/minecraft/sounds/SoundEvent;Lnet/minecraft/world/item/Item$Properties;I)V # constructor
 transitive-accessible method net/minecraft/world/item/RecordItem <init> (ILnet/minecraft/sounds/SoundEvent;Lnet/minecraft/world/item/Item$Properties;I)V
+#endgroup
 # private-f net.minecraft.world.item.ItemDisplayContext f_268735_ # id
 transitive-mutable field net/minecraft/world/item/ItemDisplayContext id B
 # public net.minecraft.world.item.ItemStackLinkedSet f_260558_ # TYPE_AND_TAG
@@ -593,6 +599,7 @@ transitive-accessible field net/minecraft/world/level/biome/BiomeGenerationSetti
 transitive-accessible field net/minecraft/world/level/biome/BiomeGenerationSettings$PlainBuilder carvers Ljava/util/Map;
 # protected net.minecraft.world.level.biome.BiomeGenerationSettings$PlainBuilder m_255276_(I)V # addFeatureStepsUpTo
 transitive-accessible method net/minecraft/world/level/biome/BiomeGenerationSettings$PlainBuilder addFeatureStepsUpTo (I)V
+#group protected net.minecraft.world.level.biome.BiomeSpecialEffects$Builder *
 # protected net.minecraft.world.level.biome.BiomeSpecialEffects$Builder f_48005_ # fogColor
 transitive-accessible field net/minecraft/world/level/biome/BiomeSpecialEffects$Builder fogColor Ljava/util/OptionalInt;
 # protected net.minecraft.world.level.biome.BiomeSpecialEffects$Builder f_48006_ # waterColor
@@ -617,12 +624,14 @@ transitive-accessible field net/minecraft/world/level/biome/BiomeSpecialEffects$
 transitive-accessible field net/minecraft/world/level/biome/BiomeSpecialEffects$Builder ambientAdditionsSettings Ljava/util/Optional;
 # protected net.minecraft.world.level.biome.BiomeSpecialEffects$Builder f_48016_ # backgroundMusic
 transitive-accessible field net/minecraft/world/level/biome/BiomeSpecialEffects$Builder backgroundMusic Ljava/util/Optional;
+#endgroup
 # protected net.minecraft.world.level.biome.MobSpawnSettings$Builder f_48362_ # spawners
 transitive-accessible field net/minecraft/world/level/biome/MobSpawnSettings$Builder spawners Ljava/util/Map;
 # protected net.minecraft.world.level.biome.MobSpawnSettings$Builder f_48363_ # mobSpawnCosts
 transitive-accessible field net/minecraft/world/level/biome/MobSpawnSettings$Builder mobSpawnCosts Ljava/util/Map;
 # protected net.minecraft.world.level.biome.MobSpawnSettings$Builder f_48364_ # creatureGenerationProbability
 transitive-accessible field net/minecraft/world/level/biome/MobSpawnSettings$Builder creatureGenerationProbability F
+#group public net.minecraft.world.level.block.Block <init>
 # public net.minecraft.world.level.block.AirBlock <init>(Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V # constructor
 transitive-accessible method net/minecraft/world/level/block/AirBlock <init> (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 # public net.minecraft.world.level.block.AttachedStemBlock <init>(Lnet/minecraft/world/level/block/StemGrownBlock;Ljava/util/function/Supplier;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V # constructor
@@ -823,6 +832,7 @@ transitive-accessible method net/minecraft/world/level/block/WitherSkullBlock <i
 transitive-accessible method net/minecraft/world/level/block/WitherWallSkullBlock <init> (Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
 # public net.minecraft.world.level.block.WoolCarpetBlock <init>(Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V # constructor
 transitive-accessible method net/minecraft/world/level/block/WoolCarpetBlock <init> (Lnet/minecraft/world/item/DyeColor;Lnet/minecraft/world/level/block/state/BlockBehaviour$Properties;)V
+#endgroup
 # public net.minecraft.world.level.block.Block m_49805_(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;I)V # popExperience
 transitive-accessible method net/minecraft/world/level/block/Block popExperience (Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;I)V
 # public net.minecraft.world.level.block.FireBlock m_221164_(Lnet/minecraft/world/level/block/state/BlockState;)I # getBurnOdds
@@ -889,6 +899,7 @@ transitive-mutable field net/minecraft/world/level/levelgen/DebugLevelSource GRI
 transitive-extendable class net/minecraft/world/level/levelgen/NoiseBasedChunkGenerator
 # protected net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator m_224239_(Lnet/minecraft/world/level/LevelHeightAccessor;Lnet/minecraft/world/level/levelgen/RandomState;IILorg/apache/commons/lang3/mutable/MutableObject;Ljava/util/function/Predicate;)Ljava/util/OptionalInt; # iterateNoiseColumn
 transitive-accessible method net/minecraft/world/level/levelgen/NoiseBasedChunkGenerator iterateNoiseColumn (Lnet/minecraft/world/level/LevelHeightAccessor;Lnet/minecraft/world/level/levelgen/RandomState;IILorg/apache/commons/lang3/mutable/MutableObject;Ljava/util/function/Predicate;)Ljava/util/OptionalInt;
+#group public net.minecraft.world.level.levelgen.NoiseGeneratorSettings *()
 # public net.minecraft.world.level.levelgen.NoiseGeneratorSettings m_255038_(Lnet/minecraft/data/worldgen/BootstapContext;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings; # caves
 transitive-accessible method net/minecraft/world/level/levelgen/NoiseGeneratorSettings caves (Lnet/minecraft/data/worldgen/BootstapContext;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
 # public net.minecraft.world.level.levelgen.NoiseGeneratorSettings m_255186_(Lnet/minecraft/data/worldgen/BootstapContext;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings; # end
@@ -901,6 +912,7 @@ transitive-accessible method net/minecraft/world/level/levelgen/NoiseGeneratorSe
 transitive-accessible method net/minecraft/world/level/levelgen/NoiseGeneratorSettings nether (Lnet/minecraft/data/worldgen/BootstapContext;)Lnet/minecraft/world/level/levelgen/NoiseGeneratorSettings;
 # public net.minecraft.world.level.levelgen.NoiseGeneratorSettings m_64474_(Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App; # lambda$static$0
 transitive-accessible method net/minecraft/world/level/levelgen/NoiseGeneratorSettings method_28558 (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+#endgroup
 # public net.minecraft.world.level.levelgen.feature.featuresize.FeatureSizeType <init>(Lcom/mojang/serialization/Codec;)V # constructor
 transitive-accessible method net/minecraft/world/level/levelgen/feature/featuresize/FeatureSizeType <init> (Lcom/mojang/serialization/Codec;)V
 # public net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType <init>(Lcom/mojang/serialization/Codec;)V # constructor
@@ -921,8 +933,8 @@ transitive-accessible method net/minecraft/world/level/storage/LevelResource <in
 transitive-mutable field net/minecraft/world/level/storage/loot/LootPool rolls Lnet/minecraft/world/level/storage/loot/providers/number/NumberProvider;
 # private-f net.minecraft.world.level.storage.loot.LootPool f_79029_ # bonusRolls
 transitive-mutable field net/minecraft/world/level/storage/loot/LootPool bonusRolls Lnet/minecraft/world/level/storage/loot/providers/number/NumberProvider;
+# }
 
-# Felt-specific AWs
 accessible class net/minecraft/client/gui/screens/advancements/AdvancementTabType
 accessible class net/minecraft/core/RegistrySetBuilder$RegistryStub
 accessible class net/minecraft/server/advancements/AdvancementVisibilityEvaluator$VisibilityRule
