@@ -203,6 +203,9 @@
 			],
 			"net/minecraft/class_1814": [
 				"net/minecraftforge/common/IExtensibleEnum"
+			],
+			"net/minecraft/class_465": [
+				"net/feltmc/neoforge/patches/interfaces/AbstractContainerScreenInterface"
 			]
 		},
 		"felt-spindle:overlays": {
@@ -402,6 +405,30 @@
 					"visibility": "public",
 					"static": false,
 					"signature": "getLifecycle()Lcom/mojang/serialization/Lifecycle;"
+				}
+			],
+			"net/minecraft/class_3929": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "getScreenFactory(Lnet/minecraft/class_3917;Lnet/minecraft/class_310;ILnet/minecraft/class_2561;)Ljava/util/Optional;"
+				}
+			],
+			"net/minecraft/class_465": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "renderSlotHighlight(Lnet/minecraft/class_332;IIII)V"
+				}
+			],
+			"net/minecraft/class_490": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "renderEntityInInventoryFollowsAngle(Lnet/minecraft/class_332;IIIFFLnet/minecraft/class_1309;)V"
 				}
 			]
 		}

@@ -959,3 +959,6 @@ extendable class net/minecraft/client/renderer/block/model/BlockFaceUV$Deseriali
 extendable class net/minecraft/client/renderer/block/model/ItemOverride$Deserializer
 extendable class net/minecraft/client/renderer/block/model/ItemTransform$Deserializer
 extendable class net/minecraft/client/renderer/block/model/ItemTransforms$Deserializer
+accessible field net/minecraft/client/gui/components/AbstractSelectionList minecraft Lnet/minecraft/client/Minecraft;
+accessible field net/minecraft/client/gui/screens/controls/KeyBindsList maxNameWidth I
+accessible field net/minecraft/client/gui/screens/controls/KeyBindsList keyBindsScreen Lnet/minecraft/client/gui/screens/controls/KeyBindsScreen;
