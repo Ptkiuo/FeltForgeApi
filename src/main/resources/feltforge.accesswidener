@@ -962,3 +962,4 @@ extendable class net/minecraft/client/renderer/block/model/ItemTransforms$Deseri
 accessible field net/minecraft/client/gui/components/AbstractSelectionList minecraft Lnet/minecraft/client/Minecraft;
 accessible field net/minecraft/client/gui/screens/controls/KeyBindsList maxNameWidth I
 accessible field net/minecraft/client/gui/screens/controls/KeyBindsList keyBindsScreen Lnet/minecraft/client/gui/screens/controls/KeyBindsScreen;
+accessible class net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen$SlotWrapper

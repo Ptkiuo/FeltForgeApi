@@ -206,6 +206,12 @@
 			],
 			"net/minecraft/class_465": [
 				"net/feltmc/neoforge/patches/interfaces/AbstractContainerScreenInterface"
+			],
+			"net/minecraft/class_481": [
+				"net/feltmc/neoforge/patches/interfaces/CreativeModeInventoryScreenInterface"
+			],
+			"net/minecraft/class_481$class_484": [
+				"net/feltmc/neoforge/patches/interfaces/CreativeModeInventoryScreen$SlotWrapperInterface"
 			]
 		},
 		"felt-spindle:overlays": {
