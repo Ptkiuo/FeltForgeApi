@@ -21,7 +21,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 @Mixin(Advancement.Builder.class)
-public class Advancement$BuilderMixin implements net.minecraftforge.common.extensions.IForgeAdvancementBuilder{
+public class Advancement_BuilderMixin implements net.minecraftforge.common.extensions.IForgeAdvancementBuilder{
     @Inject(method = "fromJson", at = @At("HEAD"), cancellable = true)
     private static void whyForgeWhy(JsonObject jsonObject, DeserializationContext deserializationContext, CallbackInfoReturnable<Advancement.Builder> cir) {
         cir.setReturnValue(fromJson(jsonObject, deserializationContext, net.minecraftforge.common.crafting.conditions.ICondition.IContext.EMPTY));

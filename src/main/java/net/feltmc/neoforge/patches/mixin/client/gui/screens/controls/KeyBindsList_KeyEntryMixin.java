@@ -25,7 +25,7 @@ import java.util.List;
 import static net.feltmc.neoforge.patches.mixin.client.gui.screens.controls.KeyBindsListMixin.NAME_SPLIT_LENGTH;
 
 @Mixin(KeyBindsList.KeyEntry.class)
-public abstract class KeyBindsList$KeyEntryMixin extends KeyBindsList.Entry {
+public abstract class KeyBindsList_KeyEntryMixin extends KeyBindsList.Entry {
 	@Shadow
 	@Final
 	private KeyMapping key;

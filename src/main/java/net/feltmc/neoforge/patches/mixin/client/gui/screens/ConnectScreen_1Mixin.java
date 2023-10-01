@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(targets = {"net/minecraft/client/gui/screens/ConnectScreen$1"})
-public abstract class ConnectScreen$1Mixin {
+public abstract class ConnectScreen_1Mixin {
     @Shadow @Final
     ServerAddress val$hostAndPort;
 

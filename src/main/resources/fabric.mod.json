@@ -324,7 +324,7 @@
 			"net/minecraft/class_4185": [
 				{
 					"type": "method",
-					"visibility": "protected",
+					"visibility": "public",
 					"static": false,
 					"signature": "<init>(Lnet/minecraft/class_4185$class_7840;)V"
 				}
