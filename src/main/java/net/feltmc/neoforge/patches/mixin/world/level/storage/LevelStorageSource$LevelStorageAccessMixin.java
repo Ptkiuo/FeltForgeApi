@@ -18,7 +18,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.nio.file.Path;
 
 @SuppressWarnings("MissingUnique")
-
 @Mixin(LevelStorageSource.LevelStorageAccess.class)
 public abstract class LevelStorageSource$LevelStorageAccessMixin {
 	@Shadow protected abstract void checkLock();
