@@ -436,6 +436,14 @@
 					"static": true,
 					"signature": "renderEntityInInventoryFollowsAngle(Lnet/minecraft/class_332;IIIFFLnet/minecraft/class_1309;)V"
 				}
+			],
+			"net/minecraft/class_8002": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": true,
+					"signature": "renderTooltipBackground(Lnet/minecraft/class_332;IIIIIIIII)V"
+				}
 			]
 		}
 	}
