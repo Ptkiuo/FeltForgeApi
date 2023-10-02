@@ -963,3 +963,5 @@ accessible field net/minecraft/client/gui/components/AbstractSelectionList minec
 accessible field net/minecraft/client/gui/screens/controls/KeyBindsList maxNameWidth I
 accessible field net/minecraft/client/gui/screens/controls/KeyBindsList keyBindsScreen Lnet/minecraft/client/gui/screens/controls/KeyBindsScreen;
 accessible class net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen$SlotWrapper
+accessible method net/minecraft/world/level/storage/LevelStorageSource readLevelData (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelDirectory;Ljava/util/function/BiFunction;)Ljava/lang/Object;
+accessible field net/minecraft/world/level/storage/LevelStorageSource LOGGER Lorg/slf4j/Logger;

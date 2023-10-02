@@ -212,6 +212,9 @@
 			],
 			"net/minecraft/class_481$class_484": [
 				"net/feltmc/neoforge/patches/interfaces/CreativeModeInventoryScreen$SlotWrapperInterface"
+			],
+			"net/minecraft/class_1922": [
+				"net/minecraftforge/common/extensions/IForgeBlockGetter"
 			]
 		},
 		"felt-spindle:overlays": {
@@ -443,6 +446,20 @@
 					"visibility": "public",
 					"static": true,
 					"signature": "renderTooltipBackground(Lnet/minecraft/class_332;IIIIIIIII)V"
+				}
+			],
+			"net/minecraft/class_32$class_5143": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "readAdditionalLevelSaveData()V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getWorldDir()Ljava/nio/file/Path;"
 				}
 			]
 		}
