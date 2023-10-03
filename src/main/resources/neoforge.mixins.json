@@ -46,6 +46,7 @@
 		"world.entity.projectile.FireworkRocketEntityMixin",
 		"world.entity.vehicle.AbstractMinecartMixin",
 		"world.entity.vehicle.MinecartSpawnerMixin",
+		"world.inventory.SlotMixin",
 		"world.item.ArrowItemMixin",
 		"world.item.DispensibleContainerItemMixin",
 		"world.item.RarityMixin",

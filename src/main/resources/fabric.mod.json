@@ -498,6 +498,26 @@
 					"static": false,
 					"signature": "<init>(Ljava/lang/String;Lnet/minecraftforge/client/settings/IKeyConflictContext;Lnet/minecraftforge/client/settings/KeyModifier;Lcom/mojang/blaze3d/platform/InputConstants$Key;Ljava/lang/String;)V"
 				}
+			],
+			"net/minecraft/class_1735": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getSlotIndex()I"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "isSameInventory(Lnet/minecraft/class_1735;)Z"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "setBackground(Lnet/minecraft/class_2960;Lnet/minecraft/class_2960;)Lnet/minecraft/class_1735;"
+				}
 			]
 		}
 	}

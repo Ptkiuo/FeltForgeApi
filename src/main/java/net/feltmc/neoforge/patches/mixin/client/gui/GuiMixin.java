@@ -27,6 +27,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
 
+@SuppressWarnings("AddedMixinMembersNamePattern")
 @Mixin(Gui.class)
 public abstract class GuiMixin implements GuiInterface {
     @Shadow @Final public Minecraft minecraft;

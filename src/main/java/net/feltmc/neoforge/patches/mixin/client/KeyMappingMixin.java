@@ -47,7 +47,41 @@ public abstract class KeyMappingMixin implements IForgeKeyMapping {
 		MAP = new KeyMappingLookup();
 	}
 	
-	@SuppressWarnings("OverwriteAuthorRequired")
+	/**
+	 * @author  Nolij
+	 * @reason  Any other way of doing this one would still be terrible
+	 */
+	@Overwrite
+	public static void click(InputConstants.Key key) {
+		for (var keyMapping : MAP.getAll(key)) {
+			if (keyMapping != null) {
+				++keyMapping.clickCount;
+			}
+		}
+	}
+	
+	/**
+	 * @author  Nolij
+	 * @reason  Any other way of doing this one would still be terrible
+	 */
+	@Overwrite
+	public static void set(InputConstants.Key key, boolean bl) {
+		for (var keyMapping : MAP.getAll(key)) {
+			if (keyMapping != null) {
+				keyMapping.setDown(bl);
+			}
+		}
+	}
+	
+	@Inject(method = "isDown", at = @At("TAIL"), cancellable = true)
+	public void isDown$TAIL(CallbackInfoReturnable<Boolean> cir) {
+		cir.setReturnValue(cir.getReturnValue() && isConflictContextAndModifierActive());
+	}
+	
+	/**
+	 * @author  Nolij
+	 * @reason  The patch literally overwrites this method
+	 */
 	@Overwrite
 	public int compareTo(KeyMapping keyMapping) {
 		if (this.category.equals(keyMapping.getCategory()))
@@ -170,4 +204,5 @@ public abstract class KeyMappingMixin implements IForgeKeyMapping {
 		MAP.put(keyCode, (KeyMapping) (Object) this);
 		KeyMapping.MAP.put(keyCode, (KeyMapping) (Object) this);
 	}
+	
 }

@@ -9,6 +9,7 @@ import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 
+@SuppressWarnings("AddedMixinMembersNamePattern")
 @Mixin(CreativeModeInventoryScreen.SlotWrapper.class)
 public class CreativeModeInventoryScreen_SlotWrapperMixin extends Slot implements CreativeModeInventoryScreen_SlotWrapperInterface {
 	@Shadow

@@ -25,6 +25,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
 
+@SuppressWarnings({ "MissingUnique", "AddedMixinMembersNamePattern" })
 @Mixin(CreativeModeInventoryScreen.class)
 public abstract class CreativeModeInventoryScreenMixin extends EffectRenderingInventoryScreen<CreativeModeInventoryScreen.ItemPickerMenu> implements net.feltmc.neoforge.patches.interfaces.CreativeModeInventoryScreenInterface {
 	@Shadow
@@ -47,7 +48,7 @@ public abstract class CreativeModeInventoryScreenMixin extends EffectRenderingIn
 	}
 	
 	@Inject(method = "init", at = @At(value = "NEW", target = "(Lnet/minecraft/client/gui/Font;IIIILnet/minecraft/network/chat/Component;)Lnet/minecraft/client/gui/components/EditBox;"))
-	private void initforge(CallbackInfo ci) {
+	private void thiz(CallbackInfo ci) {
 		this.pages.clear();
 		int tabIndex = 0;
 		List<CreativeModeTab> currentPage = new java.util.ArrayList<>();
@@ -137,10 +138,11 @@ public abstract class CreativeModeInventoryScreenMixin extends EffectRenderingIn
 		return currentPage.getVisibleTabs();
 	}
 	
-	@Inject(method = "selectTab", at = @At(value = "INVOKE", target = "Ljava/util/Set;clear()V", ordinal = 0))
-	private void selectTab$setColor(CreativeModeTab creativeModeTab, CallbackInfo ci) {
-		slotColor = creativeModeTab.getSlotColor();
-	}
+	// TODO felt: what in the hot crispy kentucky fried fuck was the original patch even supposed to do here??
+//	@Inject(method = "selectTab", at = @At(value = "INVOKE", target = "Ljava/util/Set;clear()V", ordinal = 0))
+//	private void selectTab$setColor(CreativeModeTab creativeModeTab, CallbackInfo ci) {
+//		slotColor = creativeModeTab.getSlotColor();
+//	}
 	
 	@WrapOperation(method = "selectTab", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item" +
 		"/CreativeModeTab;getType()Lnet/minecraft/world/item/CreativeModeTab$Type;", ordinal = 4))
