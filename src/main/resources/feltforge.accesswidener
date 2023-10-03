@@ -967,3 +967,4 @@ accessible method net/minecraft/world/level/storage/LevelStorageSource readLevel
 accessible field net/minecraft/world/level/storage/LevelStorageSource LOGGER Lorg/slf4j/Logger;
 accessible field net/minecraft/client/KeyMapping MAP Ljava/util/Map;
 accessible field net/minecraft/client/KeyMapping clickCount I
+accessible class net/minecraft/client/gui/screens/packs/PackSelectionModel$EntryBase

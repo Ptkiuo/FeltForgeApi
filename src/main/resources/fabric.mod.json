@@ -218,6 +218,9 @@
 			],
 			"net/minecraft/class_304": [
 				"net/minecraftforge/client/extensions/IForgeKeyMapping"
+			],
+			"net/minecraft/class_5369$class_5371": [
+				"net/feltmc/neoforge/patches/interfaces/PackSelectionModelInterface$EntryInterface"
 			]
 		},
 		"felt-spindle:overlays": {
