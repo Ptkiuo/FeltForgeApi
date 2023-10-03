@@ -1,6 +1,6 @@
 package net.feltmc.neoforge.patches.mixin.client.gui.screens;
 
-import fr.catcore.cursedmixinextensions.annotations.Public;
+import net.feltmc.feltasm.asm.CreateStatic;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -18,36 +18,42 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.Optional;
 
+@SuppressWarnings("MissingUnique")
 @Mixin(MenuScreens.class)
 public abstract class MenuScreensMixin {
-
-    @Shadow
-    @Nullable
-    private static <T extends AbstractContainerMenu> MenuScreens.ScreenConstructor<T, ?> getConstructor(MenuType<T> menuType) {
-        return null;
-    }
-
-    @Shadow @Final private static Logger LOGGER;
-
-    @Inject(method = "create", cancellable = true, at = @At("HEAD"))
-    private static <T extends AbstractContainerMenu> void overrideCreate(@Nullable MenuType<T> p_96202_, Minecraft p_96203_, int p_96204_, Component p_96205_, CallbackInfo ci) {
-        getScreenFactory(p_96202_, p_96203_, p_96204_, p_96205_).ifPresent(f -> f.fromPacket(p_96205_, p_96202_, p_96203_, p_96204_));
-        ci.cancel();
-    }
-
-    @Public
-    private static <T extends AbstractContainerMenu> java.util.Optional<MenuScreens.ScreenConstructor<T, ?>> getScreenFactory(@Nullable MenuType<T> menuType, Minecraft minecraft, int i, Component component) {
-        if (menuType == null) {
-            LOGGER.warn("Trying to open invalid screen with name: {}", component.getString());
-        } else {
-            MenuScreens.ScreenConstructor<T, ?> screenConstructor = getConstructor(menuType);
-            if (screenConstructor == null) {
-                LOGGER.warn("Failed to create screen for menu type: {}", BuiltInRegistries.MENU.getKey(menuType));
-            } else {
-                return Optional.of(screenConstructor);
-            }
-        }
-
-        return Optional.empty();
-    }
+	
+	@Shadow
+	@Nullable
+	private static <T extends AbstractContainerMenu> MenuScreens.ScreenConstructor<T, ?> getConstructor(MenuType<T> menuType) {
+		return null;
+	}
+	
+	@Shadow @Final private static Logger LOGGER;
+	
+	@Inject(method = "create", cancellable = true, at = @At("HEAD"))
+	private static <T extends AbstractContainerMenu> void overrideCreate(@Nullable MenuType<T> p_96202_, Minecraft p_96203_, int p_96204_, Component p_96205_, CallbackInfo ci) {
+		//noinspection unchecked
+		((Optional<MenuScreens.ScreenConstructor<T, ?>>) MenuScreens.getScreenFactory(p_96202_, p_96203_, p_96204_,
+			p_96205_)).ifPresent(f -> f.fromPacket(p_96205_,
+			p_96202_,
+			p_96203_, p_96204_));
+		ci.cancel();
+	}
+	
+	@CreateStatic
+	public <T extends AbstractContainerMenu> Optional<MenuScreens.ScreenConstructor<T, ?>> getScreenFactory(@Nullable MenuType<T> menuType, Minecraft minecraft, int i, Component component) {
+		if (menuType == null) {
+			LOGGER.warn("Trying to open invalid screen with name: {}", component.getString());
+		} else {
+			MenuScreens.ScreenConstructor<T, ?> screenConstructor = getConstructor(menuType);
+			if (screenConstructor == null) {
+				LOGGER.warn("Failed to create screen for menu type: {}", BuiltInRegistries.MENU.getKey(menuType));
+			} else {
+				return Optional.of(screenConstructor);
+			}
+		}
+		
+		return Optional.empty();
+	}
+	
 }

@@ -6,7 +6,7 @@ import com.llamalad7.mixinextras.sugar.Local;
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalRef;
 import com.mojang.blaze3d.platform.InputConstants;
-import fr.catcore.cursedmixinextensions.annotations.Public;
+import net.feltmc.feltasm.asm.CreateStatic;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
@@ -34,6 +34,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.List;
 import java.util.Optional;
 
+@SuppressWarnings("MissingUnique")
 @Mixin(AbstractContainerScreen.class)
 public abstract class AbstractContainerScreenMixin extends Screen implements net.feltmc.neoforge.patches.interfaces.AbstractContainerScreenInterface {
 	@Shadow
@@ -59,7 +60,10 @@ public abstract class AbstractContainerScreenMixin extends Screen implements net
 		super(component);
 	}
 	
-	@Inject(method = "render", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/systems/RenderSystem;disableDepthTest()V"))
+	@Inject(method = "render", at = @At(
+		value = "INVOKE", 
+		target = "Lcom/mojang/blaze3d/systems/RenderSystem;disableDepthTest()V", 
+		remap = false))
 	private void renderBackground(GuiGraphics guiGraphics, int i, int j, float f, CallbackInfo ci) {
 		net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(new net.minecraftforge.client.event.ContainerScreenEvent.Render.Background(
 			(AbstractContainerScreen)(Object) this, guiGraphics, i, j));
@@ -86,12 +90,13 @@ public abstract class AbstractContainerScreenMixin extends Screen implements net
 	
 	@Inject(method = "renderSlotHighlight(Lnet/minecraft/client/gui/GuiGraphics;III)V", cancellable = true, at = @At("HEAD"))
 	private static void renderSlotHighlightOverride(GuiGraphics guiGraphics, int i, int j, int k, CallbackInfo ci) {
-		renderSlotHighlight(guiGraphics, i, j, k, -2130706433);
+		AbstractContainerScreen.renderSlotHighlight(guiGraphics, i, j, k, -2130706433);
 		ci.cancel();
 	}
 	
-	@Public
-	private static void renderSlotHighlight(GuiGraphics p_283692_, int p_281453_, int p_281915_, int p_283504_, int color) {
+	@CreateStatic
+	public void renderSlotHighlight(GuiGraphics p_283692_, int p_281453_, int p_281915_, int p_283504_,
+	                                     int color) {
 		p_283692_.fillGradient(RenderType.guiOverlay(), p_281453_, p_281915_, p_281453_ + 16, p_281915_ + 16, color, color,
 			p_283504_);
 	}

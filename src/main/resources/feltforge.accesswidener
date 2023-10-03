@@ -965,3 +965,4 @@ accessible field net/minecraft/client/gui/screens/controls/KeyBindsList keyBinds
 accessible class net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen$SlotWrapper
 accessible method net/minecraft/world/level/storage/LevelStorageSource readLevelData (Lnet/minecraft/world/level/storage/LevelStorageSource$LevelDirectory;Ljava/util/function/BiFunction;)Ljava/lang/Object;
 accessible field net/minecraft/world/level/storage/LevelStorageSource LOGGER Lorg/slf4j/Logger;
+accessible field net/minecraft/client/KeyMapping MAP Ljava/util/Map;

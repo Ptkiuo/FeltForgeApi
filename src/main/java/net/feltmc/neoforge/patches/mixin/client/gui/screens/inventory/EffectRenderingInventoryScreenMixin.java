@@ -46,8 +46,12 @@ public abstract class EffectRenderingInventoryScreenMixin<T extends AbstractCont
 		}
 	}
 	
-	@WrapOperation(method = "renderEffects", at = @At(value = "INVOKE", target = "Lcom/google/common/collect/Ordering;sortedCopy(Ljava/lang/Iterable;)Ljava/util/List;"))
-	private Iterable<MobEffectInstance> renderEffects$sort(Ordering instance, Iterable<MobEffectInstance> collection) {
+	@WrapOperation(method = "renderEffects", at = @At(
+		value = "INVOKE", 
+		target = "Lcom/google/common/collect/Ordering;sortedCopy(Ljava/lang/Iterable;)Ljava/util/List;", 
+		remap = false))
+	private Iterable<MobEffectInstance> renderEffects$sort(
+		@SuppressWarnings("rawtypes") Ordering instance, Iterable<MobEffectInstance> collection) {
 		return ((Collection<MobEffectInstance>) collection).stream()
 			.filter(net.minecraftforge.client.ForgeHooksClient::shouldRenderEffect)
 			.sorted()

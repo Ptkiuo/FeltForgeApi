@@ -1,6 +1,7 @@
 package net.feltmc.neoforge.patches.mixin.client.gui.screens.inventory.tooltip;
 
 import fr.catcore.cursedmixinextensions.annotations.Public;
+import net.feltmc.feltasm.asm.CreateStatic;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.tooltip.TooltipRenderUtil;
 import org.spongepowered.asm.mixin.Final;
@@ -10,6 +11,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+@SuppressWarnings("MissingUnique")
 @Mixin(TooltipRenderUtil.class)
 public abstract class TooltipRenderUtilMixin {
 	@Shadow
@@ -37,8 +39,8 @@ public abstract class TooltipRenderUtilMixin {
 	private static int BORDER_COLOR_BOTTOM;
 	
 	// Forge: Allow specifying colors for the inner border gradient and a gradient instead of a single color for the background and outer border
-	@Public
-	private static void renderTooltipBackground(GuiGraphics p_282666_, int p_281901_, int p_281846_, int p_281559_,
+	@CreateStatic
+	public void renderTooltipBackground(GuiGraphics p_282666_, int p_281901_, int p_281846_, int p_281559_,
 	                                           int p_283336_, int p_283422_, int backgroundTop, int backgroundBottom,
 	                                           int borderTop, int borderBottom) {
 		int i = p_281901_ - 3;
@@ -56,12 +58,13 @@ public abstract class TooltipRenderUtilMixin {
 	@Inject(method = "renderTooltipBackground(Lnet/minecraft/client/gui/GuiGraphics;IIIII)V", 
 		cancellable = true, at = @At("HEAD"))
 	private static void renderTooltipBackground$override(GuiGraphics p_282666_, int p_281901_, int p_281846_, int p_281559_, int p_283336_, int p_283422_, CallbackInfo ci) {
-		renderTooltipBackground(p_282666_, p_281901_, p_281846_, p_281559_, p_283336_, p_283422_, BACKGROUND_COLOR, BACKGROUND_COLOR,
+		TooltipRenderUtil.renderTooltipBackground(p_282666_, p_281901_, p_281846_, p_281559_, p_283336_, p_283422_,
+			BACKGROUND_COLOR,	BACKGROUND_COLOR,
 			BORDER_COLOR_TOP, BORDER_COLOR_BOTTOM);
 		ci.cancel();
 	}
 	
-	@Inject(method = "renderRectangle", cancellable = true, at = @At("HEAD"))
+	@Inject(method = "renderRectangle", at = @At("HEAD"))
 	private static void renderRectangle$override(GuiGraphics p_281392_, int p_282294_, int p_283353_, int p_282640_, int p_281964_, int p_283211_, int p_282349_, CallbackInfo ci) {
 		renderRectangle(p_281392_, p_282294_, p_283353_, p_282640_, p_281964_, p_283211_, p_282349_, p_282349_);
 	}

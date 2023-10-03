@@ -215,6 +215,9 @@
 			],
 			"net/minecraft/class_1922": [
 				"net/minecraftforge/common/extensions/IForgeBlockGetter"
+			],
+			"net/minecraft/class_304": [
+				"net/minecraftforge/client/extensions/IForgeKeyMapping"
 			]
 		},
 		"felt-spindle:overlays": {
@@ -460,6 +463,40 @@
 					"visibility": "public",
 					"static": false,
 					"signature": "getWorldDir()Ljava/nio/file/Path;"
+				}
+			],
+			"net/minecraft/class_129": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "applyStackTrace(Ljava/lang/Throwable;)V"
+				}
+			],
+			"net/minecraft/class_304": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Ljava/lang/String;Lnet/minecraftforge/client/settings/IKeyConflictContext;Lcom/mojang/blaze3d/platform/InputConstants$Type;ILjava/lang/String;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Ljava/lang/String;Lnet/minecraftforge/client/settings/IKeyConflictContext;Lcom/mojang/blaze3d/platform/InputConstants$Key;Ljava/lang/String;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Ljava/lang/String;Lnet/minecraftforge/client/settings/IKeyConflictContext;Lnet/minecraftforge/client/settings/KeyModifier;Lcom/mojang/blaze3d/platform/InputConstants$Type;ILjava/lang/String;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Ljava/lang/String;Lnet/minecraftforge/client/settings/IKeyConflictContext;Lnet/minecraftforge/client/settings/KeyModifier;Lcom/mojang/blaze3d/platform/InputConstants$Key;Ljava/lang/String;)V"
 				}
 			]
 		}

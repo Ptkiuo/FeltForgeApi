@@ -1,6 +1,6 @@
 package net.feltmc.neoforge.patches.mixin.client.gui.screens.inventory;
 
-import fr.catcore.cursedmixinextensions.annotations.Public;
+import net.feltmc.feltasm.asm.CreateStatic;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
 import net.minecraft.client.gui.screens.inventory.InventoryScreen;
@@ -16,6 +16,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+@SuppressWarnings("MissingUnique")
 @Mixin(InventoryScreen.class)
 public abstract class InventoryScreenMixin extends EffectRenderingInventoryScreen<InventoryMenu> {
 	@Shadow
@@ -32,13 +33,15 @@ public abstract class InventoryScreenMixin extends EffectRenderingInventoryScree
 		float f = (float)Math.atan((double)(p_275604_ / 40.0F));
 		float f1 = (float)Math.atan((double)(p_275546_ / 40.0F));
 		// Forge: Allow passing in direct angle components instead of mouse position
-		renderEntityInInventoryFollowsAngle(p_282802_, p_275688_, p_275245_, p_275535_, f, f1, p_275689_);
+		InventoryScreen.renderEntityInInventoryFollowsAngle(p_282802_, p_275688_, p_275245_, p_275535_, f, f1,
+			p_275689_);
 		
 		ci.cancel();
 	}
 	
-	@Public
-	private static void renderEntityInInventoryFollowsAngle(GuiGraphics guiGraphics, int i, int j, int k, float angleXComponent, float angleYComponent, LivingEntity livingEntity) {
+	@CreateStatic
+	public void renderEntityInInventoryFollowsAngle(GuiGraphics guiGraphics, int i, int j, int k, float angleXComponent,
+	                                           float angleYComponent, LivingEntity livingEntity) {
 		float h = angleXComponent;
 		float l = angleYComponent;
 		Quaternionf quaternionf = (new Quaternionf()).rotateZ(3.1415927F);
