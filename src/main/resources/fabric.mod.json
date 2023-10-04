@@ -221,6 +221,9 @@
 			],
 			"net/minecraft/class_5369$class_5371": [
 				"net/feltmc/neoforge/patches/interfaces/PackSelectionModelInterface$EntryInterface"
+			],
+			"net/minecraft/class_7193": [
+				"net/feltmc/neoforge/patches/interfaces/WorldCreationContextInterface"
 			]
 		},
 		"felt-spindle:overlays": {
@@ -436,6 +439,12 @@
 					"visibility": "public",
 					"static": true,
 					"signature": "renderSlotHighlight(Lnet/minecraft/class_332;IIII)V"
+				},
+				{
+					"type": "field",
+					"visibility": "protected",
+					"static": false,
+					"signature": "slotColor:I"
 				}
 			],
 			"net/minecraft/class_490": [

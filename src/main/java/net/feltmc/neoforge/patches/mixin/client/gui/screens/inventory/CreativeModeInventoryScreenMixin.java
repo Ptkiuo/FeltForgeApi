@@ -138,11 +138,10 @@ public abstract class CreativeModeInventoryScreenMixin extends EffectRenderingIn
 		return currentPage.getVisibleTabs();
 	}
 	
-	// TODO felt: what in the hot crispy kentucky fried fuck was the original patch even supposed to do here??
-//	@Inject(method = "selectTab", at = @At(value = "INVOKE", target = "Ljava/util/Set;clear()V", ordinal = 0))
-//	private void selectTab$setColor(CreativeModeTab creativeModeTab, CallbackInfo ci) {
-//		slotColor = creativeModeTab.getSlotColor();
-//	}
+	@Inject(method = "selectTab", at = @At(value = "INVOKE", target = "Ljava/util/Set;clear()V", ordinal = 0))
+	private void selectTab$setColor(CreativeModeTab creativeModeTab, CallbackInfo ci) {
+		slotColor = creativeModeTab.getSlotColor();
+	}
 	
 	@WrapOperation(method = "selectTab", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item" +
 		"/CreativeModeTab;getType()Lnet/minecraft/world/item/CreativeModeTab$Type;", ordinal = 4))
