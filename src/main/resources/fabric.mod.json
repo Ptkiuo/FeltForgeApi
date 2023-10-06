@@ -530,6 +530,14 @@
 					"static": false,
 					"signature": "setBackground(Lnet/minecraft/class_2960;Lnet/minecraft/class_2960;)Lnet/minecraft/class_1735;"
 				}
+			],
+			"net/minecraft/class_528": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": true,
+					"signature": "FORGE_EXPERIMENTAL_WARNING_ICON:Lnet/minecraft/resources/ResourceLocation;"
+				}
 			]
 		}
 	}

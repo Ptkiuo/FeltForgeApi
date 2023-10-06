@@ -968,3 +968,4 @@ accessible field net/minecraft/world/level/storage/LevelStorageSource LOGGER Lor
 accessible field net/minecraft/client/KeyMapping MAP Ljava/util/Map;
 accessible field net/minecraft/client/KeyMapping clickCount I
 accessible class net/minecraft/client/gui/screens/packs/PackSelectionModel$EntryBase
+accessible method net/minecraft/client/gui/components/AbstractSelectionList getEntryAtPosition (DD)Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;
