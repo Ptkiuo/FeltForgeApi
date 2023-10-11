@@ -224,6 +224,12 @@
 			],
 			"net/minecraft/class_7193": [
 				"net/feltmc/neoforge/patches/interfaces/WorldCreationContextInterface"
+			],
+			"net/minecraft/class_3262": [
+				"net/minecraftforge/common/extensions/IForgePackResources"
+			],
+			"net/minecraft/class_1799": [
+				"net/minecraftforge/common/extensions/IForgeItemStack"
 			]
 		},
 		"felt-spindle:overlays": {
@@ -536,7 +542,107 @@
 					"type": "field",
 					"visibility": "public",
 					"static": true,
-					"signature": "FORGE_EXPERIMENTAL_WARNING_ICON:Lnet/minecraft/resources/ResourceLocation;"
+					"signature": "FORGE_EXPERIMENTAL_WARNING_ICON:Lnet/minecraft/class_2960;"
+				}
+			],
+			"net/minecraft/class_1729": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getRecipeBookCategories()Ljava/util/List;"
+				}
+			],
+			"net/minecraft/class_3288": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "isHidden()Z"
+				}
+			],
+			"net/minecraft/class_3288$class_7679": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": false,
+					"signature": "dataFormat:I"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "dataFormat()I"
+				},
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": false,
+					"signature": "resourceFormat:I"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "resourceFormat()I"
+				},
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": false,
+					"signature": "hidden:Z"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "hidden()Z"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Lnet/minecraft/class_2561;IILnet/minecraft/class_7699;Z)V"
+				}
+			],
+			"net/minecraft/class_3272": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Lnet/minecraft/class_2561;ILjava/util/Map;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getPackFormat(Lnet/minecraft/class_3264;)I"
+				}
+			],
+			"net/minecraft/class_1799": [
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "<init>(Lnet/minecraft/class_1935;ILnet/minecraft/class_2487;)V"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "onItemUseFirst(Lnet/minecraft/class_1838;)Lnet/minecraft/class_1269;"
+				},
+				{
+					"type": "method",
+					"visibility": "private",
+					"static": false,
+					"signature": "onItemUse(Lnet/minecraft/class_1838;Ljava/util/function/Function;)Lnet/minecraft/class_1269;"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "deserializeNBT(Lnet/minecraft/class_2487;)V"
 				}
 			]
 		}
