@@ -34,8 +34,7 @@ public abstract class WorldSelectionList_WorldListEntryMixin extends WorldSelect
 	
 	@Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Options;touchscreen()Lnet/minecraft/client/OptionInstance;"))
 	private void render$warning(GuiGraphics guiGraphics, int i, int j, int k, int l, int m, int n, int o, boolean bl, float f, CallbackInfo ci) {
-		// TODO: find out which argument is p_283025_
-		renderExperimentalWarning(guiGraphics, n, p_283025_, j, k);
+		renderExperimentalWarning(guiGraphics, n, o, j, k);
 	}
 	
 	@WrapWithCondition(method = "method_20170", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;" +

@@ -26,6 +26,6 @@ public abstract class ServerSelectionList_OnlineServerEntryMixin extends ServerS
 	private void render$ping(GuiGraphics guiGraphics, int i, int j, int k, int l, int m, int n, int o, boolean bl,
 	                         float f, CallbackInfo ci, @Local(ordinal = 10) int i1, @Local(ordinal = 11) int j1) {
 		net.minecraftforge.client.ForgeHooksClient.drawForgePingInfo(this.screen, serverData, guiGraphics, k,
-			j, l, i1, j1); // TODO: Make sure the right args are being passed.
+			j, l, i1, j1);
 	}
 }
