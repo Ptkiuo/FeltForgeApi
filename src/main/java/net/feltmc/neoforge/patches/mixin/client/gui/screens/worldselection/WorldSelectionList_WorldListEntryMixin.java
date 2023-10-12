@@ -18,6 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.List;
 
+@SuppressWarnings("MissingUnique")
 @Mixin(WorldSelectionList.WorldListEntry.class)
 public abstract class WorldSelectionList_WorldListEntryMixin extends WorldSelectionList.Entry {
 	@Shadow

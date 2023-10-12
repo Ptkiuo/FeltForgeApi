@@ -230,6 +230,10 @@
 			],
 			"net/minecraft/class_1799": [
 				"net/minecraftforge/common/extensions/IForgeItemStack"
+			],
+			"net/minecraft/class_1792": [
+				"net/minecraftforge/common/extensions/IForgeItem",
+				"net/feltmc/neoforge/patches/interfaces/ItemInterface"
 			]
 		},
 		"felt-spindle:overlays": {
@@ -651,6 +655,28 @@
 					"visibility": "public",
 					"static": false,
 					"signature": "partEntities:Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;"
+				}
+			],
+			"net/minecraft/class_1792": [
+				{
+					"type": "field",
+					"visibility": "protected",
+					"static": false,
+					"signature": "canRepair:Z"
+				},
+				{
+					"type": "method",
+					"visibility": "public",
+					"static": false,
+					"signature": "getRenderPropertiesInternal()Ljava/lang/Object;"
+				}
+			],
+			"net/minecraft/class_1792$class_1793": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": false,
+					"signature": "canRepair:Z"
 				}
 			]
 		}

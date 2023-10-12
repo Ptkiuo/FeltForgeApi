@@ -56,6 +56,8 @@
 		"world.inventory.SlotMixin",
 		"world.item.ArrowItemMixin",
 		"world.item.DispensibleContainerItemMixin",
+		"world.item.ItemMixin",
+		"world.item.ItemMixin$PropertiesMixin",
 		"world.item.ItemStackMixin",
 		"world.item.RarityMixin",
 		"world.item.alchemy.PotionMixin",
