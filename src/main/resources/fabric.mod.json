@@ -644,6 +644,14 @@
 					"static": false,
 					"signature": "deserializeNBT(Lnet/minecraft/class_2487;)V"
 				}
+			],
+			"net/minecraft/class_638": [
+				{
+					"type": "field",
+					"visibility": "public",
+					"static": false,
+					"signature": "partEntities:Lit/unimi/dsi/fastutil/ints/Int2ObjectMap;"
+				}
 			]
 		}
 	}
