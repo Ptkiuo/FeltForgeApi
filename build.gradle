@@ -80,7 +80,7 @@ dependencies {
 	implementation("net.minecrell:terminalconsoleappender:1.3.0")
 	implementation "net.neoforged.fancymodloader:core:47.1.47"
 	implementation "net.neoforged.fancymodloader:loader:47.1.47"
-	implementation "net.neoforged.fancymodloader:earlydisplay:47.1.47"
+	implementation "net.neoforged.fancymodloader:eaehrlydisplay:47.1.47"
 	implementation "net.neoforged.fancymodloader:language-java:47.1.47"
 	implementation "net.neoforged.fancymodloader:language-lowcode:47.1.47"
 	implementation "net.neoforged.fancymodloader:language-minecraft:47.1.47"
